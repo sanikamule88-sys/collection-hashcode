@@ -7,9 +7,7 @@ public class equalS_HashCode {
 		
 		 employee e1=new employee("sanika ", "pune");
 		 employee e2=new employee("sanika", "pune");
-		 System.out.println(e1.equals("abc"));
-		 
-		
+		 System.out.println(e1.equals(e2));
 	}
 
 }
@@ -27,18 +25,13 @@ class employee
 		if(o instanceof employee)
 		{
 			employee e= employee(o);
-			if(name==e.name);
-			{
-				if(Address==e.Address);
+			if(name==e.name || Address==e.Address)
 				return true;
-			}
 		}
 		return false;
 	}
 	
-	
 	private employee employee(Object o) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -61,5 +54,4 @@ class employee
 	public void setAddress(String address) {
 		Address = address;
 	}
-	
 }
